@@ -1,17 +1,19 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { useClerk } from "@clerk/nextjs";
+import { Editor } from "@monaco-editor/react";
 import React, { useEffect, useState } from "react";
+import { RotateCcwIcon, ShareIcon, TypeIcon } from "lucide-react";
 
 import useMounted from "@/hooks/useMounted";
 import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 
-import { defineMonacoThemes, LANGUAGE_CONFIG } from "../_constants";
-import { RotateCcwIcon, ShareIcon, TypeIcon } from "lucide-react";
-import { motion } from "framer-motion";
+import ShareSnippetDialog from "./ShareSnippetDialog";
 import { EditorPanelSkeleton } from "./EditorPanelSkeleton";
-import { Editor } from "@monaco-editor/react";
+
+import { defineMonacoThemes, LANGUAGE_CONFIG } from "../_constants";
 
 function EditorPanel() {
   const clerk = useClerk();
@@ -155,6 +157,9 @@ function EditorPanel() {
           {!clerk.loaded && <EditorPanelSkeleton />}
         </div>
       </div>
+      {isShareDialogOpen && (
+        <ShareSnippetDialog onClose={() => setIsShareDialogOpen(false)} />
+      )}
     </div>
   );
 }
