@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
 import { siGithub } from "simple-icons";
+import { createRef, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CircleOff, Cloud, Laptop, Moon, Palette, Sun } from "lucide-react";
 
@@ -25,13 +25,13 @@ const THEME_ICONS: Record<string, React.ReactNode> = {
 };
 
 function ThemeSelector() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const mounted = useMounted();
   const { theme, setTheme } = useCodeEditorStore();
-  const dropdownRef = React.createRef<HTMLDivElement>();
+  const dropdownRef = createRef<HTMLDivElement>();
   const currentTheme = THEMES.find((t) => t.id === theme);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
         dropdownRef.current &&
