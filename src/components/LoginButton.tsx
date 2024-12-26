@@ -1,5 +1,5 @@
-import { SignInButton } from "@clerk/nextjs";
 import { LogIn } from "lucide-react";
+import { SignInButton } from "@clerk/nextjs";
 
 function LoginButton() {
   return (
@@ -15,4 +15,5 @@ function LoginButton() {
     </SignInButton>
   );
 }
+
 export default LoginButton;
