@@ -1,3 +1,5 @@
+<h1 align="center">✨ SaaS Code Editor - Next.js 15 ✨</h1>
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -14,11 +16,36 @@ pnpm dev
 bun dev
 ```
 
+### Setup .env.local file
+
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+CONVEX_DEPLOYMENT=
+NEXT_PUBLIC_CONVEX_URL=
+```
+
+## Deploy on Vercel
+
+```bash
+CLERK_WEBHOOK_SECRET=
+LEMON_SQUEEZY_WEBHOOK_SECRET=
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+---
+
+## ⭐DO NOT FORGET TO STAR THIS REPO⭐
+
+---
+
+If you want to learn how to create it please follow below tutorial👇:
+➡ Tutorial Link 💚 "As a Programmer" Youtube Channel: [Build a SaaS Code Editor with Next.js 15 - React.js Full Stack VSCode](https://www.youtube.com/watch?v=fGkRQgf6Scw)
 
 ## Learn More
 
